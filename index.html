@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> Editable Resume Builder Zohaib hassan giaic</h1>
+        </header>
+
+        <section class="form-section">
+            <form id="resumeForm">
+                <!-- Profile Picture Input -->
+                <div class="form-group">
+                    <label for="profilePicture">Profile Picture:</label>
+                    <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="tel" id="mobile" name="mobile" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="education">Education:</label>
+                    <input type="text" id="education" name="education" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="skills">Skills:</label>
+                    <input type="text" id="skills" name="skills" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Experience:</label>
+                    <textarea id="experience" name="experience" required></textarea>
+                </div>
+
+                <button type="submit" class="generate-btn">Generate Resume</button>
+            </form>
+        </section>
+
+        <section id="resumeOutput" class="resume-section" style="display: none;">
+            <h2>Your Professional Resume</h2>
+            <div class="resume-content">
+                <!-- Profile Picture Display -->
+                <div class="profile-picture">
+                    <img id="outputProfilePicture" src="" alt="Profile Picture">
+                </div>
+                <h3 id="outputName"></h3>
+                <p id="outputMobile"></p>
+                <p id="outputEmail"></p>
+                <p id="outputEducation"></p>
+                <p id="outputSkills"></p>
+                <p id="outputExperience"></p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
